@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 import Providers from './providers'
+import ThemeBtn from './components/ThemeBtn'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,12 +17,14 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Providers>
           <header>
-            <nav className='p-12'>
+            <nav className='flex justify-center gap-36 p-12'>
               <ul>
                 <li>
                   <Link href='/'>Home</Link>
                 </li>
               </ul>
+
+              <ThemeBtn />
             </nav>
           </header>
 
